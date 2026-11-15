@@ -31,24 +31,37 @@ A RESTful API built with **Node.js, Express.js, TypeScript, and MongoDB (Mongoos
 ## 📁 Project Structure
 
 ```text
-daybook-server/
-│
-├── src/
-│   ├── index.ts
-│   ├── seed.ts
-│   └── ...
-│
-├── test/
-│   └── appointments.test.ts
-│
-├── dist/                  # Generated after build
-│
-├── .env                   # Environment variables
-├── .gitignore
-├── package.json
-├── package-lock.json
-├── tsconfig.json
-└── tsconfig.test.json
+server
+ ┣ data
+ ┃ ┣ .gitkeep
+ ┃ ┗ appointments.json
+ ┣ src
+ ┃ ┣ Module
+ ┃ ┃ ┗ Admin
+ ┃ ┃ ┃ ┗ Appointment
+ ┃ ┃ ┃ ┃ ┣ appointment.enum.ts
+ ┃ ┃ ┃ ┃ ┣ appointment.types.ts
+ ┃ ┃ ┃ ┃ ┣ appointment.validation.ts
+ ┃ ┃ ┃ ┃ ┣ controller.ts
+ ┃ ┃ ┃ ┃ ┗ routes.ts
+ ┃ ┣ store
+ ┃ ┃ ┣ index.ts
+ ┃ ┃ ┣ jsonStore.ts
+ ┃ ┃ ┣ mongoStore.ts
+ ┃ ┃ ┗ types.ts
+ ┃ ┣ app.ts
+ ┃ ┣ config.ts
+ ┃ ┣ index.ts
+ ┃ ┣ seed.ts
+ ┃ ┗ seedData.ts
+ ┣ test
+ ┃ ┗ appointments.test.ts
+ ┣ .env.example
+ ┣ package-lock.json
+ ┣ package.json
+ ┣ README.md
+ ┣ tsconfig.json
+ ┗ tsconfig.test.json
 ```
 
 ## 📋 Prerequisites
